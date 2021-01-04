@@ -83,37 +83,47 @@
 }
 ```
 
-## VSCode `tslint.json`
+## VSCode `eslint.json`
 ```json
 {
-  "rules": {
-    "max-line-length": {
-      "options": [120]
-    },
-    "new-parens": true,
-    "no-arg": true,
-    "no-shadowed-variable": true,
-    "no-bitwise": true,
-    "no-conditional-assignment": true,
-    "no-consecutive-blank-lines": true,
-    "quotemark": [true, "single"],
-    "no-irregular-whitespace": true,
-    "indent": [true, "spaces", 2],
-    "semicolon": [true, "always", "ignore-interfaces"],
-    "whitespace": [
-      true,
-      "check-branch",
-      "check-decl",
-      "check-operator",
-      "check-module",
-      "check-separator",
-      "check-rest-spread",
-      "check-type",
-      "check-typecast",
-      "check-type-operator",
-      "check-preblock"
-    ]
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "import"],
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "env": {
+    "node": true,
+    "mocha": true
   },
-  "nodePath": "./node_modules"
+  "rules": {
+    "no-useless-constructor": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "import/extensions": ["error", "never", { "packages": "always" }],
+    "no-underscore-dangle": "off",
+    "func-names": "off",
+    "max-classes-per-file": "off",
+    "max-len": ["error", 140],
+    "linebreak-style": ["error"],
+    "import/prefer-default-export": "off",
+    "prettier/prettier": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
+
+// package.json
+{
+  "lint": "eslint . --ext .ts",
+  "lint:fix": "eslint . --ext .ts --fix",
 }
 ```
