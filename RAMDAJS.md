@@ -3,8 +3,9 @@
 > Then you can use TypeScript
 
 # Use ramda
+> 💡 **TAKE NOTE**: See `SETUP.md`
 
-Shape of the car object
+This is the shape of the car object
 ```typescript
 type Car {
   name: string;
@@ -21,7 +22,7 @@ const car = {
 }
 ```
 
-## Rewrite this function using compose
+### Rewrite this function using compose
 
 ```typescript
 type IsLastInStock = (cars: Car[]): boolean;
@@ -32,7 +33,7 @@ const isLastInStock: IsLastInStock = (cars) => {
 };
 ```
 
-## Create an function
+### Create a function
 
 Create a helper function that receive car objects and calculate it's average.
 
@@ -40,7 +41,7 @@ Create a helper function that receive car objects and calculate it's average.
 type averageDollarValue = (cars: Car[]) => number
 ```
 
-## Use compose
+### Use compose
 ```typescript
 const fastestCar = (cars) => {
   const sorted = R.sortBy(car => car.horsepower, cars);
