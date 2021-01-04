@@ -1,10 +1,7 @@
-### Tech
+### CRUD VENDOR
 - KoaJS
 - Typescript
 - Mongoose
-
-- Graphql (Apollo Server)
-
 
 Write a function that can **CRUD** a `vendor` in **RESTful API**.
 
@@ -24,3 +21,15 @@ type Vendor = {
   dateTimeUpdated: Date; 
 }
 ```
+
+### GraphQL
+- [KoaJS](https://github.com/koajs/koa)
+  - `npm i -S koa`
+  - `npm i -D @types/koa`
+
+- [TypeScript](https://www.typescriptlang.org/)
+  - `npm i -D typescript`
+
+- [Mongoose](https://github.com/Automattic/mongoose)
+  - `npm i -S mongoose`
+  - `npm i -D @types/mongoose`
