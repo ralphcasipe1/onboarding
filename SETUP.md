@@ -36,7 +36,6 @@
 }
 ```
 
-## VSCode
 `launch.json`
 
 ```json
@@ -66,7 +65,9 @@
 }
 ```
 
-## VSCode TSConfig
+_______
+
+## TSConfig
 
 `tsconfig.json`
 
@@ -89,6 +90,8 @@
   "include": ["src/"]
 }
 ```
+
+_______
 
 ## VSCode ESLint
 
