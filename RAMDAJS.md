@@ -1,3 +1,7 @@
+> You can use JavaScript first to familiarize yourself in RamdaJS
+> 
+> Then you can use TypeScript
+
 # Use ramda
 
 Shape of the car object
