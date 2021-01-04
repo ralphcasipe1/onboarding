@@ -93,7 +93,7 @@ _______
 
 _______
 
-## VSCode Linting
+## Linting
 
 ### Installation
 - `npm i -D prettier eslint eslint-config-airbnb-base eslint-config-prettier  eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser`
