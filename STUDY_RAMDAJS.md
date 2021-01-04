@@ -140,7 +140,7 @@ const vendorByType(type: VendorType) {
 // you can refactor to this:
 const vendorByType = (type: VendorType) => (vendor: Vendor) => vendor.type === type;
 
-const vendorsForType = (vendors: Vendor: [], type: VendorType) => {
+const vendorsForType = (vendors: Vendor[], type: VendorType) => {
   const foundVendors = R.filter(vendorByType(type))(vendors);
 
   return R.map(vendor => vendor.name)(foundVendors)
@@ -161,7 +161,7 @@ Reset our function first:
 ```typescript
 const vendorByType = (vendor, type) => vendor.type === type;
 
-const vendorsForType = (vendors: Vendor: [], type: VendorType) => {
+const vendorsForType = (vendors: Vendor[], type: VendorType) => {
   const foundVendors = R.filter(R.partialRight(vendorByType, [type]))(vendors);
 
   return R.map(vendor => vendor.name)(foundVendors);
@@ -173,7 +173,7 @@ Swap argument
 ```typescript
 const vendorByType = (type, vendor) => vendor.type === type;
 
-const vendorsForType = (vendors: Vendor: [], type: VendorType) => {
+const vendorsForType = (vendors: Vendor[], type: VendorType) => {
   const foundVendors = R.filter(R.partial(vendorByType, [type]))(vendors);
 
   return R.map(vendor => vendor.name)(foundVendors);
@@ -184,7 +184,7 @@ const vendorsForType = (vendors: Vendor: [], type: VendorType) => {
 ```typescript
 const vendorByType = R.curry((type, vendor) => vendor.type === type)
 
-const vendorsForType = (vendors: Vendor: [], type: VendorType) => {
+const vendorsForType = (vendors: Vendor[], type: VendorType) => {
   const foundVendors = R.filter(vendorByType(type))(vendors);
 
   return R.map(vendor => vendor.name)(foundVendors);
@@ -200,7 +200,7 @@ const vendorByType = R.curry((vendor, type) => vendor.type === type)
 Then use `.flip`
 
 ```typescript
-const vendorsForType = (vendors: Vendor: [], type: VendorType) => {
+const vendorsForType = (vendors: Vendor[], type: VendorType) => {
   const foundVendors = R.filter(R.flip(vendorByType)(type))(vendors);
 
   return R.map(vendor => vendor.name)(foundVendors);
@@ -220,7 +220,7 @@ const secondArgumentOnly = args(R.__, 'foo', R.__);
 We can use `.__` instead of `.flip`
 
 ```typescript
-const vendorsForType = (vendors: Vendor: [], type: VendorType) => {
+const vendorsForType = (vendors: Vendor[], type: VendorType) => {
   const foundVendors = R.filter(vendorByType(R.__, type))(vendors);
 
   return R.map(vendor => vendor.name)(foundVendors);
