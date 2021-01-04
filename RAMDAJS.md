@@ -61,8 +61,8 @@ Given this object:
 const data = [
   { acc_1: 1 },
   { acc_1: 2 },
-  { acc_2: 3 }
-]
+  { acc_2: 3 },
+];
 ```
 
 The result would be like this:
