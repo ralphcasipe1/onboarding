@@ -1,4 +1,6 @@
-## VSCode `settings.json`
+## VSCode
+`settings.json`
+
 ```json
 {
   "window.zoomLevel": -1,
@@ -34,7 +36,9 @@
 }
 ```
 
-## VSCode `launch.json`
+## VSCode
+`launch.json`
+
 ```json
 {
   "version": "0.2.0",
@@ -62,7 +66,10 @@
 }
 ```
 
-## VSCode `tsconfig.json`
+## VSCode TSConfig
+
+`tsconfig.json`
+
 ```json
 {
   "compilerOptions": {
@@ -83,7 +90,9 @@
 }
 ```
 
-## VSCode `eslint.json`
+## VSCode ESLint
+
+`eslint.json`
 ```json
 {
   "parser": "@typescript-eslint/parser",
@@ -120,8 +129,10 @@
     }
   }
 }
+```
 
-// package.json
+`package.json`
+```
 {
   "lint": "eslint . --ext .ts",
   "lint:fix": "eslint . --ext .ts --fix",
