@@ -1,0 +1,2 @@
+- DRY - Don't Repeat Yourself
+- YAGNI(Y) - You aren't gonna need it (yet)
