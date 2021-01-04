@@ -17,21 +17,21 @@
 - [Apollo Server](https://www.apollographql.com/docs/)
 
 ## Database - ODM/ORM
-- [PostgreSQL- Sequelize]
-- [MongoDB - Mongoose]
+- [PostgreSQL- Sequelize](https://sequelize.org/master/)
+- [MongoDB - Mongoose](https://mongoosejs.com/)
 
 ## Architecture
-- Micro-service
-- CQRS
-- Eventstore and Event sourcing
+- [Micro-service](https://microservices.io/)
+- [CQRS](https://www.martinfowler.com/bliki/CQRS.html)
+- [Eventstore and Event sourcing](https://microservices.io/patterns/data/event-sourcing.html)
 - [Jamstack](https://jamstack.org/what-is-jamstack/)
 
 ## Lint
 - Eslint
 
 ## Test
-- [Jest](https://...)
-- [Ava](https://)
+- [Jest](https://jestjs.io/)
+- [Ava](https://github.com/avajs/ava)
 
 - [Mocha](https://mochajs.org/) 
 - [Chai](https://www.chaijs.com/)
@@ -42,7 +42,7 @@
 - [docker-compose](https://docs.docker.com/compose/)
 
 ## Library
-- RamdaJS
+- [RamdaJS](https://ramdajs.com/)
 
 ## Programming Paradigm
 - Functional Programming
