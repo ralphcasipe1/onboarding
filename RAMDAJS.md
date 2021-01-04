@@ -6,7 +6,10 @@
 
 > 💡 **TAKE NOTE**: See [`SETUP.md`](https://github.com/ralphcasipe1/onboarding/blob/main/SETUP.md)
 
+- Add a unit test for each function.
+
 This is the shape of the car object
+
 ```typescript
 type Car {
   name: string;
@@ -35,7 +38,7 @@ const isLastInStock: IsLastInStock = (cars) => {
 };
 ```
 
-### Create a function
+### Create a function using `.compose`
 
 Create a helper function that receive car objects and calculate the average.
 
@@ -74,3 +77,5 @@ The result would be like this:
 ```typescript
 [{ acc_1: 3 }, { acc_2: 3 }]
 ```
+
+
