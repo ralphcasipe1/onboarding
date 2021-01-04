@@ -1,4 +1,7 @@
-## CRUD VENDOR
+# CRUD VENDOR
+
+> 💡 **TAKE NOTE**: See [`SETUP.md`](https://github.com/ralphcasipe1/onboarding/blob/main/SETUP.md)
+
 - KoaJS
 - Typescript
 - Mongoose
