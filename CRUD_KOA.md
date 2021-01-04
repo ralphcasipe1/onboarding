@@ -1,4 +1,4 @@
-### CRUD VENDOR
+## CRUD VENDOR
 - KoaJS
 - Typescript
 - Mongoose
@@ -22,7 +22,7 @@ type Vendor = {
 }
 ```
 
-### GraphQL
+### Tech stack
 - [KoaJS](https://github.com/koajs/koa)
   - `npm i -S koa`
   - `npm i -D @types/koa`
@@ -33,3 +33,7 @@ type Vendor = {
 - [Mongoose](https://github.com/Automattic/mongoose)
   - `npm i -S mongoose`
   - `npm i -D @types/mongoose`
+
+## Adopting GraphQL
+- `npm i -S apollo-server graphql`
+
