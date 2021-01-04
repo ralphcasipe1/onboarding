@@ -2,7 +2,8 @@
 > 
 > Then you can use TypeScript
 
-# Use ramda
+# RamdaJS Exercises
+
 > 💡 **TAKE NOTE**: See [`SETUP.md`](https://github.com/ralphcasipe1/onboarding/blob/main/SETUP.md)
 
 This is the shape of the car object
@@ -43,6 +44,7 @@ type averageDollarValue = (cars: Car[]) => number
 ```
 
 ### Use `.compose`
+
 ```typescript
 const fastestCar = (cars) => {
   const sorted = R.sortBy(car => car.horsepower, cars);
@@ -64,6 +66,8 @@ const data = [
   { acc_2: 3 },
 ];
 ```
+
+> 💡 **TAKE NOTE**: The properties here are dynamic it means you could have a property like this, `acc_cefacd298d2e5d08b43001aeb169eea4`
 
 The result would be like this:
 
