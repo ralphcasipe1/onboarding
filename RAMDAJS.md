@@ -22,7 +22,7 @@ const car = {
 }
 ```
 
-### Rewrite this function using compose
+### Rewrite this function using `.compose`
 
 ```typescript
 type IsLastInStock = (cars: Car[]): boolean;
@@ -41,7 +41,7 @@ Create a helper function that receive car objects and calculate it's average.
 type averageDollarValue = (cars: Car[]) => number
 ```
 
-### Use compose
+### Use `.compose`
 ```typescript
 const fastestCar = (cars) => {
   const sorted = R.sortBy(car => car.horsepower, cars);
