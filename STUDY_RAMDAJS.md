@@ -193,11 +193,11 @@ const vendorsForType = (vendors: Vendor: [], type: VendorType) => {
 
 What if we have this kind of order.
 
-Then use `.flip`
-
 ```typescript
 const vendorByType = R.curry((vendor, type) => vendor.type === type)
 ```
+
+Then use `.flip`
 
 ```typescript
 const vendorsForType = (vendors: Vendor: [], type: VendorType) => {
