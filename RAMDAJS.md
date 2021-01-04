@@ -36,7 +36,7 @@ const isLastInStock: IsLastInStock = (cars) => {
 
 ### Create a function
 
-Create a helper function that receive car objects and calculate it's average.
+Create a helper function that receive car objects and calculate the average.
 
 ```typescript
 type averageDollarValue = (cars: Car[]) => number
