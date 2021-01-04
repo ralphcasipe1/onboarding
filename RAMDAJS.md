@@ -29,6 +29,7 @@ type IsLastInStock = (cars: Car[]): boolean;
 
 const isLastInStock: IsLastInStock = (cars) => {
   const lastCar = R.last(cars);
+
   return R.prop('inStock', lastCar);
 };
 ```
@@ -45,7 +46,27 @@ type averageDollarValue = (cars: Car[]) => number
 ```typescript
 const fastestCar = (cars) => {
   const sorted = R.sortBy(car => car.horsepower, cars);
+
   const fastest = R.last(sorted);
+
   return R.concat(fastest.name, ' is the fastest');
 };
+```
+
+### Write a function that get each respective accounts' total payout
+
+Given this object:
+
+``` typescript
+const data = [
+  { acc_1: 1 },
+  { acc_1: 2 },
+  { acc_2: 3 }
+]
+```
+
+The result would be like this:
+
+```typescript
+[{ acc_1: 3 }, { acc_2: 3 }]
 ```
