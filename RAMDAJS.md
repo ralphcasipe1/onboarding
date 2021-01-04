@@ -3,7 +3,7 @@
 > Then you can use TypeScript
 
 # Use ramda
-> 💡 **TAKE NOTE**: See `SETUP.md`
+> 💡 **TAKE NOTE**: See [`SETUP.md`](https://github.com/ralphcasipe1/onboarding/blob/main/SETUP.md)
 
 This is the shape of the car object
 ```typescript
