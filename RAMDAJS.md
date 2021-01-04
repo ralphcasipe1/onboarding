@@ -1,13 +1,15 @@
-> You can use JavaScript first to familiarize yourself in RamdaJS
-> 
-> Then you can use TypeScript
-
 # RamdaJS Exercises
 
 > 💡 **TAKE NOTE**: See [`SETUP.md`](https://github.com/ralphcasipe1/onboarding/blob/main/SETUP.md)
 
-- Add a unit test for each function.
+> You can use JavaScript first to familiarize yourself in RamdaJS
+> 
+> Then you can use TypeScript
 
+- Add a unit test for each function, Please use:
+    - `mocha`
+    - `chai`
+    
 This is the shape of the car object
 
 ```typescript
