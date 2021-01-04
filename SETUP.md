@@ -93,9 +93,12 @@ _______
 
 _______
 
-## VSCode ESLint
+## VSCode Linting
 
-`eslint.json`
+### Installation
+- `npm i -D prettier eslint eslint-config-airbnb-base eslint-config-prettier  eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser`
+
+`.eslintrc`
 ```json
 {
   "parser": "@typescript-eslint/parser",
@@ -134,8 +137,18 @@ _______
 }
 ```
 
-`package.json`
+`.prettierrc`
+```json
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "semi": true
+}
+
 ```
+
+`package.json`
+```json
 {
   "lint": "eslint . --ext .ts",
   "lint:fix": "eslint . --ext .ts --fix",
