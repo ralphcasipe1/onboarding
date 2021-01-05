@@ -1,4 +1,5 @@
 ## VSCode
+
 `settings.json`
 
 ```json
@@ -99,8 +100,10 @@ _______
 - `npm i -D prettier eslint eslint-config-airbnb-base eslint-config-prettier  eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser`
 
 `.eslintrc`
+
 ```json
 {
+  
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "import"],
   "extends": [
@@ -115,6 +118,7 @@ _______
     "mocha": true
   },
   "rules": {
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.ts", "**/*.spec.ts"]}],
     "no-useless-constructor": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-explicit-any": "off",
@@ -138,6 +142,7 @@ _______
 ```
 
 `.prettierrc`
+
 ```json
 {
   "singleQuote": true,
@@ -148,9 +153,24 @@ _______
 ```
 
 `package.json`
+
 ```json
 {
   "lint": "eslint . --ext .ts",
   "lint:fix": "eslint . --ext .ts --fix",
+}
+```
+
+`.mocharc.json`
+
+```json
+{
+  "colors": true,
+  "exit": true,
+  "recursive": true,
+  "bail": true,
+  "require": "ts-node/register/transpile-only",
+  "spec": "test/**/*.spec.ts",
+  "file": "test/integration/common.ts"
 }
 ```
