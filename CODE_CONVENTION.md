@@ -19,9 +19,8 @@ format of the message
     - `test`: changes happen under the `test/` folder.
     - `build`: when the `package-lock` is updated
     - `chore`: when updating old dependencies
-- `scope`: in what area of the code sample:
+- `scope`: in what area of the code is changed sample:
     - `library`
-    - `util`
     - `middleware`
     - `ci`
     - `docker-compose`
@@ -37,6 +36,23 @@ format of the message
     - `[Jira Card](link)`
     - `[Design Docs](link)`
     - `[GraphQL Change Request](link)`
+
+### Example
+```git
+feat: change new logger format
+```
+
+```
+feat(ci): run asynchronous test in circleci
+```
+
+```git
+feat(library): add new utility
+
+Add utility function to generate new serial code depending on the supplemented type.
+
+- [Jira](link)
+```
 
 ## Typescript
 
