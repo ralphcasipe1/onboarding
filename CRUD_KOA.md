@@ -13,7 +13,7 @@ The vendor object shape
 ```typescript
 enum VendorType {
   Seamless = 'SEAMLESS'
-  Transfer = 'TRASNFER'
+  Transfer = 'TRANSFER'
 };
 
 type Vendor = {
