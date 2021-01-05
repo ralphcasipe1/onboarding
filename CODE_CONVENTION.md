@@ -37,7 +37,7 @@ format of the message
     - `[Design Docs](link)`
     - `[GraphQL Change Request](link)`
 
-### Example
+### Examples
 ```git
 feat: change new logger format
 ```
