@@ -3,6 +3,7 @@
 ## GIT Message
 
 format of the message
+
 ```html
 <type>(<scope>): <header-title>
 
