@@ -134,6 +134,7 @@ ____________
 
 ## Activity 2 Part 4 Promo
 .....
+
 As an admin/operator you can create a promo
 
 A promo should have `name`, `template`, `title`, `description`, `submitted`, `enabled`, and `status`.
@@ -145,5 +146,8 @@ A promo should have `name`, `template`, `title`, `description`, `submitted`, `en
 
 ## Activity 2 Part 5 Promo Enrollment Request
 .....
+
+A member could file a request to a specific promo.
+
 - `promo` is required
 - `status` only accepts `PENDING`, `REJECTED`, `PROCESSING`, and `APPROVED`
