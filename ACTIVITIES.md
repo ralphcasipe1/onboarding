@@ -119,7 +119,22 @@ type Vendor = {
 ## Adopting GraphQL
 - `npm i -S apollo-server graphql`
 
+These are the Query and Mutation for vendor:
+```gql
+type Query {
+  vendor(id: ID): Vendor
+  vendors: [Vendor]
+}
+
+type Mutation {
+  createVendor(input: CreateVendorInput!): Boolean!
+  updateVendor(id: ID!, input: UpdateVendorInput!): Boolean!
+  deleteVendor(id: ID!): Boolean!
+}
+```
+
 ____________
+
 ## Activity 2 Part 2 Member
 > Use the koa-crud, the activity #2
 
@@ -133,7 +148,18 @@ ____________
 **Member should go through authentication to have access to `vendors` and `promos`**
 
 ## Activity 2 Part 4 Promo
-.....
+```gql
+type Query {
+  promo: Promo
+  promos: [Promo]!
+}
+
+type Mutation {
+  createPromo(input: CreatePromoInput!): Boolean!
+  updatePromo(input: UpdatePromoInput!): Boolean!
+  deletePromo(id: ID!): Boolean!
+}
+```
 
 As an admin/operator you can create a promo
 
@@ -145,9 +171,18 @@ A promo should have `name`, `template`, `title`, `description`, `submitted`, `en
 - `status` only accepts `DRAFT`, `ACTIVE` and `INACTIVE`
 
 ## Activity 2 Part 5 Promo Enrollment Request
-.....
+Add logic to these following `Mutation`:
+
+```gql
+type Query {
+  promoEnrollmentRequests: [PromoEnrollmentRequests]
+}
+
+type Mutation {
+  enrollToPromo(id: ID!): Boolean!
+}
+```
 
 A member could file a request to a specific promo.
-
 - `promo` is required
 - `status` only accepts `PENDING`, `REJECTED`, `PROCESSING`, and `APPROVED`
