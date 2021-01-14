@@ -119,7 +119,22 @@ type Vendor = {
 ## Adopting GraphQL
 - `npm i -S apollo-server graphql`
 
+These are the Query and Mutation for vendor:
+```gql
+type Query {
+  vendor(id: ID): Vendor
+  vendors: [Vendor]
+}
+
+type Mutation {
+  createVendor(input: CreateVendorInput!): Boolean!
+  updateVendor(id: ID!, input: UpdateVendorInput!): Boolean!
+  deleteVendor(id: ID!): Boolean!
+}
+```
+
 ____________
+
 ## Activity 2 Part 2 Member
 > Use the koa-crud, the activity #2
 
@@ -132,22 +147,81 @@ ____________
 ## Activity 2 Part 3 Authentication
 **Member should go through authentication to have access to `vendors` and `promos`**
 
+For authentication you can use a RESTful api like for example the endpoint is:
+
+```bash
+POST authenticate
+```
+
+and the return value would be:
+
+```json
+{
+  "token": "<token>"
+}
+```
+
+You can use this in Apollo GraphQL Playground by adding a `Authorization` in http headers:
+```json
+{
+  "Authorization": "Bearer <token>"
+}
+```
 ## Activity 2 Part 4 Promo
-.....
+
+Add your implementation given these `Queries` and `Mutations`.
+```gql
+type Query {
+  promo: Promo
+  promos: [Promo]!
+}
+
+type Mutation {
+  createPromo(input: CreatePromoInput!): Boolean!
+  updatePromo(input: UpdatePromoInput!): Boolean!
+  deletePromo(id: ID!): Boolean!
+}
+```
 
 As an admin/operator you can create a promo
 
-A promo should have `name`, `template`, `title`, `description`, `submitted`, `enabled`, and `status`.
-- `name` is required
-- `template` only accepts `DEPOSIT` and `SIGN_UP`
-- `title` is require
-- `description` is required
-- `status` only accepts `DRAFT`, `ACTIVE` and `INACTIVE`
+- A promo should these core fields `name`, `template`, `title`, `description`, `submitted`, `enabled`, and `status`.
+    - `name` is required
+    - `template` only accepts `DEPOSIT` and `SIGN_UP`
+    - `title` is require
+    - `description` is required
+    - `status` only accepts `DRAFT`, `ACTIVE` and `INACTIVE`
+        - the default value of `status` is `DRAFT`
+- An admin could only delete promos that are `DRAFT` and `INACTIVE`.
+
+- If the promo is a `DEPOSIT` then it should have a field of `minimumBalance`.
+
+- If the promo is a `SIGN_UP` then it should have a field of `requireMemberFields`.
+    - `requireMemberFields` is an array that accepts these values:
+        - **REAL_NAME**
+        - **EMAIL**
+        - **BANK_ACCOUNT**
 
 ## Activity 2 Part 5 Promo Enrollment Request
-.....
+Add logic to these following `Mutation`:
+
+```gql
+type Query {
+  promoEnrollmentRequest: PromoEnrollmentRequest
+  promoEnrollmentRequests: [PromoEnrollmentRequests]!
+}
+
+type Mutation {
+  enrollToPromo(id: ID!): Boolean! # this for the member
+
+  processPromoEnrollmentRequest(id: ID!): Boolean!
+  approvePromoEnrollmentRequest(id: ID!): Boolean!
+  rejectPromoEnrollmentRequest(id: ID!): Boolean!
+}
+```
 
 A member could file a request to a specific promo.
-
 - `promo` is required
+
 - `status` only accepts `PENDING`, `REJECTED`, `PROCESSING`, and `APPROVED`
+    - the default value of `status` is `PENDING`
