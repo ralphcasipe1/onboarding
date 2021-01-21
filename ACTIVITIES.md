@@ -273,7 +273,7 @@ Example:
 When a member who do not have a `bankAccount` tries to enroll to a promo that have a `requireMemberFields` of **`BANK_ACCOUNT`** then it would propagate an error:
 
 1. `code` - **`REQUIRE_MEMBER_FIELDS_NOT_MET`**
-2. `message` - Member does not have the following fields: **`BANK_ACCOUNT`**
+2. `message` - `'Member does not have the following fields: BANK_ACCOUNT'`
 
 The error code should ONLY contain the context on what the error is. For example:
 1. `MEMBER_NOT_FOUND`
