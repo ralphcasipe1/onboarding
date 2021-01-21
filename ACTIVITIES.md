@@ -234,7 +234,7 @@ A member could file a request to a specific promo.
 Add this to your root of `koa-crud/`.
 
 ```dockerfile
-FROM node:12.18.2-alpine
+FROM node:14.15.4-slim
 
 WORKDIR /srv/node
 
