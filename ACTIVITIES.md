@@ -264,7 +264,7 @@ Try to get the average of your current test speed and record it.
 And try installing this as `devDependency`:
 - [mongodb-memory-server](https://github.com/nodkz/mongodb-memory-server)
 Apply it to your tests
-And record your new average test speed, if there is any improvements.
+And record your new average test speed, if there are any improvements.
 
 ### Custom Errors
 Add custom errors for each different validation.
