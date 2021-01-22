@@ -230,6 +230,43 @@ A member could file a request to a specific promo.
 
 ## MISC
 
+### `husky` and `lint-staged`
+Install `husky` and `lint-staged` as`devDependencies`:
+
+```bash
+npm i -D husky lint-staged
+```
+
+Add a new file, `.huskyrc`
+
+`.huskyrc`
+
+```json
+{
+  "hooks": {
+    "pre-commit": "lint-staged",
+    "pre-push": "npm test"
+  }
+}
+```
+
+Add a new file, `.lintstagedrc`
+
+`.lintstagedrc`:
+
+```json
+{
+  "./**/*.ts": [
+    "npm run lint:fix",
+    "prettier --write",
+  ],
+  "./**/*.spec.ts": [
+    "npm run lint:fix",
+    "prettier --write",
+  ],
+}
+```
+
 ### Dockerfile
 Add this to your root of `koa-crud/`.
 
