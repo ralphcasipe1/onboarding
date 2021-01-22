@@ -60,6 +60,18 @@ Add utility function to generate new serial code depending on the supplemented t
 - [Jira](link)
 ```
 
+## Folder and File Naming Convention
+It should follow the `kebab-case`
+
+### Folders
+`use-cases/`
+`command-handlers/`
+
+### Files
+- `system-config.ts`
+- `error-handler.ts`
+- `rate-limiter.ts`
+
 ## Typescript
 
 Type name should be PascalCased.
