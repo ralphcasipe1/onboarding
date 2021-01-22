@@ -1,3 +1,9 @@
+## Folder Structure
+```
+| --- activity-1/
+| --- activity-2/
+```
+
 ## VSCode
 
 `settings.json`
@@ -158,6 +164,7 @@ _______
 {
   "lint": "eslint . --ext .ts",
   "lint:fix": "eslint . --ext .ts --fix",
+  "typecheck": "tsc --noEmit"
 }
 ```
 
@@ -171,6 +178,5 @@ _______
   "bail": true,
   "require": "ts-node/register/transpile-only",
   "spec": "test/**/*.spec.ts",
-  "file": "test/integration/common.ts"
 }
 ```
