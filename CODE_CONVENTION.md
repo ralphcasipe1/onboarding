@@ -2,9 +2,9 @@
 
 ## GIT Message
 
-format of the message
+Format of the git message
 
-```html
+```
 <type>(<scope>): <header-title>
 
 <message-body>
@@ -39,14 +39,19 @@ format of the message
     - `[GraphQL Change Request](link)`
 
 ### Examples
+With type and header title only.
+
 ```git
 feat: change new logger format
 ```
 
+With type, scope and header title.
 ```
 feat(ci): run asynchronous test in circleci
 ```
 
+
+With the header, body and footer.
 ```git
 feat(library): add new utility
 
